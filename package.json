@@ -4,7 +4,8 @@
   "main": "index.js",
   "author": "Ross Yatsura",
   "scripts": {
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "live-server": "live-server public",
     "dev-server": "webpack-dev-server",
     "start": "npm-run-all --parallel dev-server build",
@@ -22,6 +23,7 @@
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
+    "extract-text-webpack-plugin": "3.0.0",
     "jest": "20.0.4",
     "moment": "2.18.1",
     "node-sass": "4.5.3",
