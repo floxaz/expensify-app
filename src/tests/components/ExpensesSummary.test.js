@@ -4,9 +4,9 @@ import { ExpenseSummary } from '../../components/ExpensesSummary';
 import selectExpensesTotal from '../../selectors/expenses-total';
 import expenses from '../fixtures/expenses';
 
-test('should render ExpenseSummary component with no expenses', () => {
-    const expenseCount = [].length;
-    const expensesTotal = selectExpensesTotal([]);
+test('should render ExpenseSummary component with one expense', () => {
+    const expenseCount = [expenses[0]].length;
+    const expensesTotal = selectExpensesTotal([expenses[0]]);
     const wrapper = shallow(
     <ExpenseSummary 
         expenseCount={expenseCount} 
@@ -16,7 +16,7 @@ test('should render ExpenseSummary component with no expenses', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
-test('should render ExpenseSummary component with expenses', () => {
+test('should render ExpenseSummary component with two or more expenses', () => {
     const expenseCount = expenses.length;
     const expensesTotal = selectExpensesTotal(expenses);
     const wrapper = shallow(

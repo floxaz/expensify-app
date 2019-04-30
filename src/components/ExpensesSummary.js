@@ -4,7 +4,7 @@ import selectExpensesTotal from '../selectors/expenses-total';
 
 export const ExpenseSummary = props => (
     <div>
-      <p>Viewing {props.expenseCount} expenses totalling {props.expensesTotal}</p>
+      <p>Viewing {props.expenseCount} {props.expenseCount !== 1 ? 'expenses' : 'expense'} totalling {props.expensesTotal}</p>
     </div>
 );
 
